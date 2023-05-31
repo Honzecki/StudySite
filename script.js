@@ -7,6 +7,8 @@ const borderLeft = document.getElementById("border-left");
 const borderRight = document.getElementById("border-right");
 const snappable = document.getElementsByClassName("snappable");
 var snapOn = title;
+var bLeftVar;
+var bRightVar;
 
 document.addEventListener("mousemove", function(event) {
 // Getting the x and y values of the mouse
@@ -46,8 +48,8 @@ document.addEventListener("mousedown", function(event) {
 });
 document.addEventListener("mouseup", function(event) {
     mouseBckg.style.opacity = 0.25;
-    borderLeft.style.opacity = 0.1;
-    borderRight.style.opacity = 0.1;
+    borderLeft.style.opacity = Math.abs(event.clientX - window.innerWidth) / window.innerWidth;
+    borderRight.style.opacity = event.clientX / window.innerWidth;
 });
 
 // snap on tha beam on to tha thing

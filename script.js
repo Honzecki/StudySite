@@ -7,8 +7,6 @@ const borderLeft = document.getElementById("border-left");
 const borderRight = document.getElementById("border-right");
 const snappable = document.getElementsByClassName("snappable");
 var snapOn = title;
-var bLeftVar;
-var bRightVar;
 
 document.addEventListener("mousemove", function(event) {
 // Getting the x and y values of the mouse
